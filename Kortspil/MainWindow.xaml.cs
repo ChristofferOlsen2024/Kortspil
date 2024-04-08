@@ -30,7 +30,58 @@ namespace Kortspil
 
         private string FindBillede(int kortnummer)
         {
-            string resultat = "2-Spar.jpg";
+            string resultat = "purple_back.jpg";
+            
+            switch (kortnummer)
+            {
+                case 1:
+                    resultat = "Es-Spar.jpg";
+                    break;
+                case 2:
+                    resultat = "2-Spar.jpg";
+                    break;
+                case 3:
+                    resultat = "3-Spar.jpg";
+                    break;
+                case 4:
+                    resultat = "4-Spar.jpg";
+                    break;
+                case 5:
+                    resultat = "5-Spar.jpg";
+                    break;
+                case 6:
+                    resultat = "6-Spar.jpg";
+                    break;
+                case 7:
+                    resultat = "7-Spar.jpg";
+                    break;
+                case 8:
+                    resultat = "8-Spar.jpg";
+                    break;
+                case 9:
+                    resultat = "9-Spar.jpg";
+                    break;
+                case 10:
+                    resultat = "10-Spar.jpg";
+                    break;
+                case 11:
+                    resultat = "Knægt-Spar.jpg";
+                    break;
+                case 12:
+                    resultat = "Dame-Spar.jpg";
+                    break;
+                case 13:
+                    resultat = "Konge-Spar.jpg";
+                    break;
+
+
+            }
+            return resultat;
+
+
+
+
+
 
             /*I spillet bliver alle kort repræsenteret af et tal mellem 1 og 52 (der er 52 kort i et spil kort).
 
@@ -53,10 +104,6 @@ Inden for hver af de fire kulører (spar, ruder, klør og hjerter) er hvert navn
 For kortene fra 2 til 10 bruges blot deres tal.
 
 Et filnavn består på den måde både af kortets navn og dets kulør, fx "10-spar.jpg" eller "dame-klør.jpg".*/
-
-
-
-            return resultat;
         }
     }
 }

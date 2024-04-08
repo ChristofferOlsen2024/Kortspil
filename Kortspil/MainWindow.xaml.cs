@@ -30,42 +30,69 @@ namespace Kortspil
 
         private string FindBillede(int kortnummer)
         {
-            string Typer = "";
-            string Numb = "";
+            string typer = "";
+            string nummer = "";
 
             if (kortnummer is >= 1 and <= 13) {
-                Typer = "Spar";
+                typer = "Spar";
+                switch (kortnummer)
+                {
+                    case 1:
+                        nummer = "Es"; break;
+                    case 11:
+                        nummer = "Knægt"; break;
+                    case 12:
+                        nummer = "Dame"; break;
+                    case 13:
+                        nummer = "Konge"; break;
+                }
             } else if (kortnummer is >= 14 and <= 26)
             {
-                Typer = "Ruder";
+                typer = "Ruder";
+                switch (kortnummer)
+                {
+                    case 14:
+                        nummer = "Es"; break;
+                    case 24:
+                        nummer = "Knægt"; break;
+                    case 25:
+                        nummer = "Dame"; break;
+                    case 26:
+                        nummer = "Konge"; break;
+                }
             } else if (kortnummer is >= 27 and <= 39)
             {
-                Typer = "Klør";
+                typer = "Klør";
+                switch (kortnummer)
+                {
+                    case 27:
+                        nummer = "Es"; break;
+                    case 37:
+                        nummer = "Knægt"; break;
+                    case 38:
+                        nummer = "Dame"; break;
+                    case 39:
+                        nummer = "Konge"; break;
+                }
             } else if (kortnummer is >= 40 and <= 52)
             {
-                Typer = "Hjerter";
+                typer = "Hjerter";
+                switch (kortnummer)
+                {
+                    case 40:
+                        nummer = "Es"; break;
+                    case 50:
+                        nummer = "Knægt"; break;
+                    case 51:
+                        nummer = "Dame"; break;
+                    case 52:
+                        nummer = "Konge"; break;
+                } 
             }
 
             //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-            if (Numb = 1)
-            {
-                Numb = "Es";
-            }
-            else if (kortnummer = 11)
-            {
-                Numb = "Knægt";
-            }
-            else if (kortnummer = 12)
-            {
-                Numb = "Dame";
-            }
-            else if (kortnummer = 13)
-            {
-                Numb = "Konge";
-            }
-
-            string resultat = $"{Numb}-{Typer}.jpg";
+            string resultat = $"{nummer}-{typer}.jpg";
             return resultat;
 
 

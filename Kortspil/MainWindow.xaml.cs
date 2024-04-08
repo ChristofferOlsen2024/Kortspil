@@ -33,15 +33,15 @@ namespace Kortspil
             string Typer = "";
             string Numb = "";
 
-            if (kortnummer is > 1 and < 14) {
+            if (kortnummer is >= 1 and <= 13) {
                 Typer = "Spar";
-            } else if (kortnummer is > 14 and < 27)
+            } else if (kortnummer is >= 14 and <= 26)
             {
                 Typer = "Ruder";
-            } else if (kortnummer is > 27 and < 40)
+            } else if (kortnummer is >= 27 and <= 39)
             {
                 Typer = "Klør";
-            } else if (kortnummer is > 40 and < 53)
+            } else if (kortnummer is >= 40 and <= 52)
             {
                 Typer = "Hjerter";
             }

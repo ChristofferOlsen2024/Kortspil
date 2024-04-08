@@ -30,52 +30,42 @@ namespace Kortspil
 
         private string FindBillede(int kortnummer)
         {
-            string resultat = "purple_back.jpg";
-            
-            switch (kortnummer)
+            string Typer = "";
+            string Numb = "";
+
+            if (kortnummer is > 1 and < 14) {
+                Typer = "Spar";
+            } else if (kortnummer is > 14 and < 27)
             {
-                case 1:
-                    resultat = "Es-Spar.jpg";
-                    break;
-                case 2:
-                    resultat = "2-Spar.jpg";
-                    break;
-                case 3:
-                    resultat = "3-Spar.jpg";
-                    break;
-                case 4:
-                    resultat = "4-Spar.jpg";
-                    break;
-                case 5:
-                    resultat = "5-Spar.jpg";
-                    break;
-                case 6:
-                    resultat = "6-Spar.jpg";
-                    break;
-                case 7:
-                    resultat = "7-Spar.jpg";
-                    break;
-                case 8:
-                    resultat = "8-Spar.jpg";
-                    break;
-                case 9:
-                    resultat = "9-Spar.jpg";
-                    break;
-                case 10:
-                    resultat = "10-Spar.jpg";
-                    break;
-                case 11:
-                    resultat = "Knægt-Spar.jpg";
-                    break;
-                case 12:
-                    resultat = "Dame-Spar.jpg";
-                    break;
-                case 13:
-                    resultat = "Konge-Spar.jpg";
-                    break;
-
-
+                Typer = "Ruder";
+            } else if (kortnummer is > 27 and < 40)
+            {
+                Typer = "Klør";
+            } else if (kortnummer is > 40 and < 53)
+            {
+                Typer = "Hjerter";
             }
+
+            //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+            if (Numb = 1)
+            {
+                Numb = "Es";
+            }
+            else if (kortnummer = 11)
+            {
+                Numb = "Knægt";
+            }
+            else if (kortnummer = 12)
+            {
+                Numb = "Dame";
+            }
+            else if (kortnummer = 13)
+            {
+                Numb = "Konge";
+            }
+
+            string resultat = $"{Numb}-{Typer}.jpg";
             return resultat;
 
 

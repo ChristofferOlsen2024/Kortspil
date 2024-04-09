@@ -37,35 +37,24 @@ namespace Kortspil
                 typer = "Spar";
                 switch (kortnummer)
                 {
-                    case 1:
+                    case 1 14 27 40:
                         nummer = "Es"; break;
-                    case 11:
+                    case 11 24:
                         nummer = "Knægt"; break;
-                    case 12:
+                    case 12 25:
                         nummer = "Dame"; break;
-                    case 13:
+                    case 13 26:
                         nummer = "Konge"; break;
                 }
             } else if (kortnummer is >= 14 and <= 26)
             {
                 typer = "Ruder";
-                switch (kortnummer)
-                {
-                    case 14:
-                        nummer = "Es"; break;
-                    case 24:
-                        nummer = "Knægt"; break;
-                    case 25:
-                        nummer = "Dame"; break;
-                    case 26:
-                        nummer = "Konge"; break;
-                }
             } else if (kortnummer is >= 27 and <= 39)
             {
                 typer = "Klør";
                 switch (kortnummer)
                 {
-                    case 27:
+                    case :
                         nummer = "Es"; break;
                     case 37:
                         nummer = "Knægt"; break;
@@ -79,7 +68,7 @@ namespace Kortspil
                 typer = "Hjerter";
                 switch (kortnummer)
                 {
-                    case 40:
+                    case :
                         nummer = "Es"; break;
                     case 50:
                         nummer = "Knægt"; break;

@@ -33,53 +33,45 @@ namespace Kortspil
             string typer = "";
             string nummer = "";
 
-            if (kortnummer is >= 1 and <= 13) {
-                typer = "Spar";
-                switch (kortnummer)
-                {
-                    case 1 14 27 40:
-                        nummer = "Es"; break;
-                    case 11 24:
-                        nummer = "Knægt"; break;
-                    case 12 25:
-                        nummer = "Dame"; break;
-                    case 13 26:
-                        nummer = "Konge"; break;
-                }
-            } else if (kortnummer is >= 14 and <= 26)
+            switch (kortnummer)
             {
-                typer = "Ruder";
-            } else if (kortnummer is >= 27 and <= 39)
-            {
-                typer = "Klør";
-                switch (kortnummer)
-                {
-                    case :
-                        nummer = "Es"; break;
-                    case 37:
-                        nummer = "Knægt"; break;
-                    case 38:
-                        nummer = "Dame"; break;
-                    case 39:
-                        nummer = "Konge"; break;
-                }
-            } else if (kortnummer is >= 40 and <= 52)
-            {
-                typer = "Hjerter";
-                switch (kortnummer)
-                {
-                    case :
-                        nummer = "Es"; break;
-                    case 50:
-                        nummer = "Knægt"; break;
-                    case 51:
-                        nummer = "Dame"; break;
-                    case 52:
-                        nummer = "Konge"; break;
-                } 
+                case >= 1 and <= 13:
+                    typer = "Spar"; break;
+                case >= 14 and <= 26:
+                    typer = "Ruder"; break;
+                case >= 27 and <= 39:
+                    typer = "Klør"; break;
+                case >= 40 and <= 52:
+                    typer = "Hjerter"; break;
             }
 
-            //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            //Es, Knægt, Dame, Konge
+
+            switch (kortnummer)
+            {
+                case 1 or 14 or 27 or 40:
+                    nummer = "Es"; break;
+                case 11 or 24 or 37 or 50:
+                    nummer = "Knægt"; break;
+                case 12 or 25 or 38 or 51:
+                    nummer = "Dame"; break;
+                case 13 or 26 or 39 or 52:
+                    nummer = "Konge"; break;
+            }
+
+            // Numre sub.
+
+            switch (kortnummer)
+            {
+                case 1 or 14 or 27 or 40:
+                    nummer = "Es"; break;
+                case 11 or 24 or 37 or 50:
+                    nummer = "Knægt"; break;
+                case 12 or 25 or 38 or 51:
+                    nummer = "Dame"; break;
+                case 13 or 26 or 39 or 52:
+                    nummer = "Konge"; break;
+            }
 
             string resultat = $"{nummer}-{typer}.jpg";
             return resultat;

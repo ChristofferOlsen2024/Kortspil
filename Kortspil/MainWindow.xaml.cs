@@ -63,14 +63,14 @@ namespace Kortspil
 
             switch (kortnummer)
             {
-                case 1 or 14 or 27 or 40:
-                    nummer = "Es"; break;
-                case 11 or 24 or 37 or 50:
-                    nummer = "Knægt"; break;
-                case 12 or 25 or 38 or 51:
-                    nummer = "Dame"; break;
-                case 13 or 26 or 39 or 52:
-                    nummer = "Konge"; break;
+                case 2 or > 10:
+                    nummer = $"{kortnummer}"; break;
+                case 15 or > 23:
+                    nummer = $"{kortnummer}"; break;
+                case 28 or > 36:
+                    nummer = $"{kortnummer}"; break;
+                case 41 or > 49:
+                    nummer = $"{kortnummer}"; break;
             }
 
             string resultat = $"{nummer}-{typer}.jpg";
